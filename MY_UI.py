@@ -37,8 +37,11 @@ class MY_UI(QMainWindow, Ui_MainWindow):
         # lst=self.data.copy()
         # tmp = random.choice(lst)#随机选择一个
         # self.labName.setText(tmp)
+        #得到总行数
         randomRow=random.randint(1,self.rows-1)
+        #得到学号
         stuno=self.table.cell(randomRow,0).value
+        #得到姓名
         stuname=self.table.cell(randomRow,1).value
         self.labName.setText(stuname)
         self.labName_2.setText(str(stuno).split('.')[0])
