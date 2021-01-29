@@ -49,6 +49,7 @@ class MY_UI(QMainWindow, Ui_MainWindow):
         self.timer.start(50)
     def stop(self):
         self.timer.stop()
+    #回车开始，回车停止
     def keyPressEvent(self, e):
         if e.key() == Qt.Key_Return or e.key() == Qt.Key_Space:
             if self.timer.isActive():
